@@ -8,7 +8,7 @@ using crypto.getRandomNumber() instead of Math.random()
 try it yourself: 
 https://htmlpreview.github.io/?https://github.com/pg0/secure-password-generator/blob/26c37f8e17c5ebd4b793e4d060f8de58489e37b5/pwgen.html
 
-removed <br /> here for better viewing
+removed `<br />` for better viewing
 ``` html
 <div class="container">
 Passwords: <input type="number" id="pwamount" value="4" />
@@ -28,6 +28,7 @@ Individual: <input type="checkbox" id="pwindividual" /><input type="text" id="pw
 <span class="smalltext">Click on Password to Copy to Clipboard</span>
 </div>
 ```
+
 
 ``` javascript
 // generate multiple passwords, with selected complexity
