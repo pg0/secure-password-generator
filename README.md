@@ -8,6 +8,26 @@ using crypto.getRandomNumber() instead of Math.random()
 try it yourself: 
 https://htmlpreview.github.io/?https://github.com/pg0/secure-password-generator/blob/26c37f8e17c5ebd4b793e4d060f8de58489e37b5/pwgen.html
 
+``` html
+<div class="container">
+Passwords: <input type="number" id="pwamount" value="4" /><br />
+<br />
+PW Length: <input type="number" id="pwlength" value="14" /><br />
+Ambiguous: <input type="checkbox" id="pwambigious" />`Il1O0`<br />
+Lowercase: <input type="checkbox" id="pwlowercase" checked="checked" />`[a-z]`<br />
+Uppercase: <input type="checkbox" id="pwuppercase" checked="checked" />`[A-Z]`<br />
+Numbers: <input type="checkbox" id="pwnumbers" checked="checked" />`[0-9]`<br />
+Easy Symbols: <input type="checkbox" id="pweasysymbols" checked="checked" /> `!@#$%*+-=?`<br />
+Other Symbols: <input type="checkbox" id="pwothersymbols" /> `^&_:|~/.,;`<br />
+Individual: <input type="checkbox" id="pwindividual" /><input type="text" id="pwindiv" value=".,!$§#?" /><br />
+<br />
+<button id="btnGenerate" class="generate" onclick="genPwd()">generate</button><br />
+<br />
+<div id="pwres">&nbsp;</div>
+<span class="smalltext">Click on Password to Copy to Clipboard</span>
+</div>
+```
+
 ``` javascript
 function genPwd() {
   let pwamount = document.querySelector('#pwamount').value;
@@ -66,4 +86,9 @@ function generateSecurePassword(length=10, includeLowercase=true, includeUpperca
   }
   else throw new Error("Your browser can't generate secure random numbers");
 };
+
+// sometimes makes problems showing all chars
+function filterSpecChars(str) {
+return str.replace(/>/g, "&gt;").replace(/</g, "&lt;");
+}
 ```
