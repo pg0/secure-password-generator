@@ -1,4 +1,4 @@
-# secure-password-generator
+# secure random password generator
 secure js random password generator
 
 only using js
