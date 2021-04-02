@@ -29,6 +29,7 @@ Individual: <input type="checkbox" id="pwindividual" /><input type="text" id="pw
 ```
 
 ``` javascript
+// generate multiple passwords
 function genPwd() {
   let pwamount = document.querySelector('#pwamount').value;
   let pwlength = document.querySelector('#pwlength').value;
@@ -50,6 +51,7 @@ function genPwd() {
   }
 }
 
+// copy value to clipboard
 function copyToClipboard(value){
   const textarea = document.createElement('textarea');
   textarea.value = value;
