@@ -20,6 +20,7 @@ Uppercase: <input type="checkbox" id="pwuppercase" checked="checked" />[A-Z]
 Numbers: <input type="checkbox" id="pwnumbers" checked="checked" />[0-9]
 Easy Symbols: <input type="checkbox" id="pweasysymbols" checked="checked" />!@#$%*+-=?
 Other Symbols: <input type="checkbox" id="pwothersymbols" />^&_:|~/.,;
+Space: <input type="checkbox" id="pwspace" /> ␣
 Individual: <input type="checkbox" id="pwindividual" /><input type="text" id="pwindiv" value=".,!$§#?" />
 
 <button id="btnGenerate" class="generate" onclick="genPwd()">generate</button>
@@ -41,6 +42,7 @@ function genPwd() {
     let includeAmbiguous = document.querySelector('#pwambigious').checked;
     let includeEasySymbols = document.querySelector('#pweasysymbols').checked;
     let includeOtherSymbols = document.querySelector('#pwothersymbols').checked;
+    let includeSpace = document.querySelector('#pwspace').checked;
     let includeIndividual = document.querySelector('#pwindividual').checked;
 
     document.querySelector('#pwres').innerHTML = '';
@@ -49,8 +51,13 @@ function genPwd() {
         
         let nladdon = '';
         if (i > 0) nladdon = '<br/>';
-        document.querySelector('#pwres').innerHTML += nladdon + '<span class="clickme" onclick="copyToClipboard(this.innerText)">'+ filterSpecChars(pwresult) +'</span>';
+        document.querySelector('#pwres').innerHTML += nladdon + '<span class="clickme" onclick="copyToClipboard(replaceForCopy(this.innerText))">'+ filterSpecChars(pwresult) +'</span>';
     }
+}
+
+// replace view chars to chars
+function replaceForCopy(str) {
+    return str.replace(/␣/g, " ");
 }
 
 // copy to Clipboard
@@ -74,6 +81,7 @@ function generateSecurePassword(length=10, includeLowercase=true, includeUpperca
     if (includeNumbers && includeAmbiguous) charset += "0";
     if (includeEasySymbols) charset += "!@#$%*+-=?";
     if (includeOtherSymbols) charset += "^&_:|~/.,;";
+    if (includeSpace) charset += "␣";
     if (includeIndividual) charset += document.querySelector('#pwindiv').value;
 
     if(window.crypto && window.crypto.getRandomValues)
