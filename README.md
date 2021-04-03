@@ -4,7 +4,7 @@ secure javascript only - random password generator
 
 using crypto.getRandomNumber() instead of Math.random()
 
-![](https://user-images.githubusercontent.com/2691185/113472562-855c6f00-9464-11eb-8dbb-284368aaf1f0.png)
+![image](https://user-images.githubusercontent.com/2691185/113472633-d8362680-9464-11eb-80fd-cf7f27b355d2.png)
 
 try it yourself: 
 
