@@ -1,13 +1,17 @@
 # secure random password generator
 
-secure javascript only - random password generator
-
+secure javascript only - random password generator\
 using crypto.getRandomNumber() instead of Math.random()
 
 ![image](https://user-images.githubusercontent.com/2691185/113472633-d8362680-9464-11eb-80fd-cf7f27b355d2.png)
 
 try it yourself: \
 https://htmlpreview.github.io/?https://github.com/pg0/secure-password-generator/blob/main/pwgen.html
+
+all needed code is in the single html inline.\
+you could also strip it from the html and include the js script
+
+## code
 
 removed `<br />` for better view
 ``` html
