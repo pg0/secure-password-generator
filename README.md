@@ -6,6 +6,8 @@ using crypto.getRandomNumber() instead of Math.random()
 
 
 try it yourself: 
+![](https://user-images.githubusercontent.com/2691185/113472562-855c6f00-9464-11eb-8dbb-284368aaf1f0.png)
+
 https://htmlpreview.github.io/?https://github.com/pg0/secure-password-generator/blob/main/pwgen.html
 
 removed `<br />` for better viewing
