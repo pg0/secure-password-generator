@@ -8,7 +8,7 @@ using crypto.getRandomNumber() instead of Math.random()
 ## try it
 https://htmlpreview.github.io/?https://github.com/pg0/secure-password-generator/blob/main/pwgen.html
 
-all needed code is in the single html inline.\
+all needed code is in the single html file.\
 you could also strip it from the html and include the js script
 
 ## code
