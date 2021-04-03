@@ -10,7 +10,7 @@ try it yourself:
 
 https://htmlpreview.github.io/?https://github.com/pg0/secure-password-generator/blob/main/pwgen.html
 
-removed `<br />` for better viewing
+removed `<br />` for better view
 ``` html
 <div class="container">
 Passwords: <input type="number" id="pwamount" value="4" />
